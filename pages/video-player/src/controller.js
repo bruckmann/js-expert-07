@@ -1,4 +1,4 @@
-import { EVENTS } from '../../lib/shared/constants.js'
+import { EVENTS } from '../../lib/shared/config/constants.js'
 
 export default class Controller {
   #view

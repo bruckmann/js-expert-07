@@ -1,5 +1,5 @@
 import Camera from '../../lib/shared/camera.js'
-import { supportsWorkerType } from '../../lib/shared/utils.js'
+import supportsWorkerType from '../../lib/shared/utils/supportWorkerTypes.js'
 import Controller from './controller.js'
 import View from './view.js'
 
