@@ -1,0 +1,21 @@
+{
+  "name": "webapp",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx browser-sync -w",
+    "lint": "eslint . --fix",
+    "prettier": "npx prettier --write ."
+  },
+  "keywords": [],
+  "author": "erickwendel",
+  "license": "MIT",
+  "description": "JSExpert Max Gesture Controller - Semana JS Expert 7.0",
+  "devDependencies": {
+    "browser-sync": "^2.27.11",
+    "eslint": "^8.35.0"
+  },
+  "dependencies": {
+    "prettier": "^2.8.4"
+  }
+}
