@@ -14,6 +14,7 @@ export default class CardsView {
       target.disabled = true
       fn(target.value)
       target.disabled = false
+      this.#inputSearch.focus()
     })
   }
 
