@@ -1,3 +1,5 @@
+import { EVENTS } from '../../lib/shared/constants.js'
+
 export default class Controller {
   #view
   #worker
@@ -20,7 +22,7 @@ export default class Controller {
     let ready = false
 
     worker.onmessage = ({ data }) => {
-      if (data === 'READY') {
+      if (data === EVENTS.READY) {
         // TODO put this READY command into a config file
         this.#view.enableButton()
         ready = true
