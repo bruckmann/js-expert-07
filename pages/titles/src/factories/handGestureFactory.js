@@ -9,6 +9,7 @@ import Camera from '../../../lib/shared/camera.js'
 import HandGestureController from '../controllers/handGestureController.js'
 import HandGestureView from '../views/handGestureView.js'
 import HandGestureService from '../services/handGestureService.js'
+import { FINGER_LOOKUP_INDEXES } from '../../../lib/shared/config/constants.js'
 
 const camera = await Camera.init()
 
@@ -16,7 +17,9 @@ const factory = {
   async initalize() {
     return HandGestureController.initialize({
       camera,
-      view: new HandGestureView(),
+      view: new HandGestureView({
+        FINGER_LOOKUP_INDEXES,
+      }),
       service: new HandGestureService({
         fingerpose: window.fp,
         handPoseDetection: window.handPoseDetection,

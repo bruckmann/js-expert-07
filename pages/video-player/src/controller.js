@@ -23,7 +23,6 @@ export default class Controller {
 
     worker.onmessage = ({ data }) => {
       if (data === EVENTS.READY) {
-        // TODO put this READY command into a config file
         this.#view.enableButton()
         ready = true
         return
@@ -32,7 +31,6 @@ export default class Controller {
       const blinked = data.blinked
       this.#blinkCounter += blinked
       this.#view.togglePlayVideo()
-      console.log('blinked', blinked)
     }
 
     return {
