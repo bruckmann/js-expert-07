@@ -11,7 +11,10 @@ import HandGestureView from '../views/handGestureView.js'
 import HandGestureService from '../services/handGestureService.js'
 import { FINGER_LOOKUP_INDEXES } from '../../../lib/shared/config/constants.js'
 
+const styler = new PseudoStyler()
 const camera = await Camera.init()
+
+await styler.loadDocumentStyles()
 
 const factory = {
   async initalize() {
@@ -19,6 +22,7 @@ const factory = {
       camera,
       view: new HandGestureView({
         FINGER_LOOKUP_INDEXES,
+        styler,
       }),
       service: new HandGestureService({
         fingerpose: window.fp,
