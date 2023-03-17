@@ -18,7 +18,7 @@ console.log('Model loaded')
 postMessage(EVENTS.READY)
 
 onmessage = async ({ data: video }) => {
-  const blinked = await service.hadBlinked(video)
-  if (!blinked) return
-  postMessage({ blinked })
+  const { rightBlinked, leftBlinked } = await service.hadBlinked(video)
+  if (!rightBlinked && !leftBlinked) return
+  postMessage({ rightBlinked, leftBlinked })
 }
